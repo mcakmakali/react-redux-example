@@ -32,6 +32,18 @@ export const AddUserPost = (state) => {
            });
         
         }).catch((err) => console.log(err))
+    }  
+}
+
+
+export const UserProfileDetail = (id) => {
+    return function (dispatch) {  
+      axios.get(`http://localhost:3002/user/${id}`)
+        .then((res) => {
+            dispatch({
+                type: 'USER_PROFILE',
+                payload: res.data
+               });
+        }).catch((err) => console.log(err));
     }
-   
 }

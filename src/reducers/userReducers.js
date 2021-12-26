@@ -6,6 +6,10 @@ const userReducers = (state = {}, action ) => {
         case 'ADD_USER':
             return { ...state };
 
+        case 'USER_PROFILE':
+           
+            return { ...state, user: action.payload }
+
         default:
             return state;
     }
