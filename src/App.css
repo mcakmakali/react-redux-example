@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+
+.userBox { display: flex; justify-content: space-between; }
+.userBox > div { width: 48%;}
+.form-group { margin-top: 10px;}
